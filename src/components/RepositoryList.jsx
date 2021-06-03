@@ -1,4 +1,6 @@
-import RespositoryItem from "./RepositoryItem";
+import RespositoryItem from "./RepositoryItem"
+
+import '../styles/repositories.scss'
 
 const repo = {
   name: 'unform',
@@ -8,7 +10,7 @@ const repo = {
 
 export default function RespositoryList() {
   return (
-    <section>
+    <section className='repository-list'>
       <h1>Lista de repositórios</h1>
 
       <ul>
