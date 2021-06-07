@@ -3,14 +3,14 @@ import RespositoryItem from "./RepositoryItem"
 
 import '../styles/repositories.scss'
 
-const repo = {
-  name: 'unform',
-  description: 'descrição unform',
-  link: 'http://github.com/unform/unform'
+interface Repository {
+  name: string
+  description: string
+  html_url: string
 }
 
 export default function RespositoryList() {
-  const [repositories, setRepositories] = useState([])
+  const [repositories, setRepositories] = useState<Repository[]>([])
 
   useEffect(() => {
     fetch('https://api.github.com/orgs/rocketseat/repos')
